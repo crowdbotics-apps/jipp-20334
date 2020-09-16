@@ -60,7 +60,7 @@ export class __Blank extends React.Component {
       }}
     >
       <CheckBox
-        text="Checkbox"
+        text="Strenght workout"
         disabled={false}
         style={{
           marginLeft: 0,
