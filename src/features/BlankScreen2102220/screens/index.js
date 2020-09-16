@@ -217,7 +217,7 @@ export class __Blank extends React.Component {
       <View
         style={{
           width: "100%",
-          height: "16.666666666666668%",
+          height: "5%",
           marginLeft: 0,
           marginRight: 0,
           marginTop: 0,
@@ -226,7 +226,7 @@ export class __Blank extends React.Component {
           paddingRight: 0,
           paddingTop: 0,
           paddingBottom: 0,
-          overflow: "visible",
+          overflow: "scroll",
           fontSize: 12,
           color: "#000000",
           backgroundColor: "#ffffff",
