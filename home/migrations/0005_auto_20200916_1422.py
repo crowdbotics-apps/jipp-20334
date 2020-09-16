@@ -7,34 +7,70 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0004_auto_20200916_1410'),
+        ("home", "0004_auto_20200916_1410"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='routines',
-            name='player',
+            model_name="routines",
+            name="player",
         ),
         migrations.CreateModel(
-            name='Routinesexcercise',
+            name="Routinesexcercise",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('routines', models.BigIntegerField()),
-                ('excercise', models.BigIntegerField()),
-                ('routineID', models.BigIntegerField(blank=True, null=True)),
-                ('routineexcerciseID', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='routinesexcercise_routineexcerciseID', to='home.HomePage')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("routines", models.BigIntegerField()),
+                ("excercise", models.BigIntegerField()),
+                ("routineID", models.BigIntegerField(blank=True, null=True)),
+                (
+                    "routineexcerciseID",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="routinesexcercise_routineexcerciseID",
+                        to="home.HomePage",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Excercise',
+            name="Excercise",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('excerciseID', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='excercise_excerciseID', to='home.Routinesexcercise')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "excerciseID",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="excercise_excerciseID",
+                        to="home.Routinesexcercise",
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
-            model_name='routines',
-            name='idh',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='routines_idh', to='home.Routinesexcercise'),
+            model_name="routines",
+            name="idh",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="routines_idh",
+                to="home.Routinesexcercise",
+            ),
         ),
     ]
