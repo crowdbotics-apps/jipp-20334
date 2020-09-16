@@ -54,24 +54,21 @@ export class __Blank extends React.Component {
         backgroundSize: "auto"
       }}
     >
-      <Image
-        resizeMode="cover"
-        source={{
-          uri:
-            "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/Kristendom.png"
-        }}
+      <Text
         style={{
-          width: "100%",
-          height: 200,
           marginLeft: 0,
           marginRight: 0,
-          marginTop: 0,
-          marginBottom: 0,
-          paddingLeft: 0,
-          paddingRight: 0,
-          paddingTop: 0,
-          paddingBottom: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
           overflow: "visible",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#ffffff",
+          fontFamily: "Roboto-Regular",
           borderColor: "#000000",
           borderStyle: "solid",
           borderWidth: 0,
@@ -79,9 +76,17 @@ export class __Blank extends React.Component {
           borderRightWidth: 0,
           borderTopWidth: 0,
           borderBottomWidth: 0,
-          borderRadius: 0
+          borderRadius: 0,
+          textAlign: "left",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
         }}
-      />
+      >
+        Welcom to start page. Select from list below
+      </Text>
       <Radio
         text="Radio button"
         disabled={false}
@@ -113,6 +118,47 @@ export class __Blank extends React.Component {
         checked={this.state.Radio_3}
         onChange={nextChecked => this.setState({ Radio_3: nextChecked })}
       />
+      <Button
+        textStyle={{
+          fontSize: 12,
+          color: "#000000",
+          textAlign: "center",
+          fontFamily: "Roboto-Regular"
+        }}
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#3366FF",
+          fontFamily: "Roboto-Regular",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textAlign: "center",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        onPress={() => alert("Pressed!")}
+      >
+        Create player profile
+      </Button>
     </View>
   )
 }
