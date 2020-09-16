@@ -23,11 +23,11 @@ export class __Blank extends React.Component {
     Input_3: "",
     Input_5: "",
     Datepicker_13: new Date("01/01/2000"),
-    CheckBox_21: false,
-    CheckBox_26: false,
-    CheckBox_31: false,
-    CheckBox_24: false,
-    CheckBox_29: false
+    Radio_53: false,
+    Radio_49: false,
+    Radio_41: false,
+    Radio_54: false,
+    Radio_55: false
   }
   render = () => (
     <View
@@ -214,28 +214,21 @@ export class __Blank extends React.Component {
         date={this.state.Datepicker_13}
         onSelect={nextValue => this.setState({ Datepicker_13: nextValue })}
       />
-      <View
+      <Text
         style={{
-          width: "100%",
-          height: "5%",
           marginLeft: 0,
           marginRight: 0,
-          marginTop: 0,
-          marginBottom: 0,
-          paddingLeft: 0,
-          paddingRight: 0,
-          paddingTop: 0,
-          paddingBottom: 0,
-          overflow: "scroll",
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
           fontSize: 12,
           color: "#000000",
           backgroundColor: "#ffffff",
           fontFamily: "Roboto-Regular",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "flex-start",
-          alignItems: "stretch",
-          alignContent: "stretch",
           borderColor: "#000000",
           borderStyle: "solid",
           borderWidth: 0,
@@ -244,243 +237,212 @@ export class __Blank extends React.Component {
           borderTopWidth: 0,
           borderBottomWidth: 0,
           borderRadius: 0,
-          backgroundSize: "auto"
+          textAlign: "left",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
         }}
       >
-        <View
-          style={{
-            width: "50%",
-            height: "100%",
-            marginLeft: 0,
-            marginRight: 0,
-            marginTop: 0,
-            marginBottom: 0,
-            paddingLeft: 0,
-            paddingRight: 0,
-            paddingTop: 0,
-            paddingBottom: 0,
-            overflow: "visible",
-            fontSize: 12,
-            color: "#000000",
-            backgroundColor: "#ffffff",
-            fontFamily: "Roboto-Regular",
-            flexDirection: "column",
-            flexWrap: "wrap",
-            justifyContent: "flex-start",
-            alignItems: "stretch",
-            alignContent: "stretch",
-            borderColor: "#000000",
-            borderStyle: "solid",
-            borderWidth: 0,
-            borderLeftWidth: 0,
-            borderRightWidth: 0,
-            borderTopWidth: 0,
-            borderBottomWidth: 0,
-            borderRadius: 0,
-            backgroundSize: "auto"
-          }}
-        >
-          <CheckBox
-            text="Outside hitter"
-            disabled={false}
-            style={{
-              marginLeft: 0,
-              marginRight: 0,
-              marginTop: 5,
-              marginBottom: 5,
-              paddingLeft: 5,
-              paddingRight: 5,
-              paddingTop: 5,
-              paddingBottom: 5,
-              overflow: "visible",
-              borderColor: "#000000",
-              borderStyle: "solid",
-              borderWidth: 0,
-              borderLeftWidth: 0,
-              borderRightWidth: 0,
-              borderTopWidth: 0,
-              borderBottomWidth: 0,
-              borderRadius: 0,
-              textAlign: "left",
-              textAlignVertical: "center",
-              textDecorationLine: "none",
-              textTransform: "none",
-              lineHeight: 12,
-              letterSpacing: 0
-            }}
-            checked={this.state.CheckBox_21}
-            onChange={nextChecked =>
-              this.setState({ CheckBox_21: nextChecked })
-            }
-          />
-          <CheckBox
-            text="Setter"
-            disabled={false}
-            style={{
-              marginLeft: 0,
-              marginRight: 0,
-              marginTop: 5,
-              marginBottom: 5,
-              paddingLeft: 5,
-              paddingRight: 5,
-              paddingTop: 5,
-              paddingBottom: 5,
-              overflow: "visible",
-              borderColor: "#000000",
-              borderStyle: "solid",
-              borderWidth: 0,
-              borderLeftWidth: 0,
-              borderRightWidth: 0,
-              borderTopWidth: 0,
-              borderBottomWidth: 0,
-              borderRadius: 0,
-              textAlign: "left",
-              textAlignVertical: "center",
-              textDecorationLine: "none",
-              textTransform: "none",
-              lineHeight: 12,
-              letterSpacing: 0
-            }}
-            checked={this.state.CheckBox_26}
-            onChange={nextChecked =>
-              this.setState({ CheckBox_26: nextChecked })
-            }
-          />
-          <CheckBox
-            text="Opposite"
-            disabled={false}
-            style={{
-              marginLeft: 0,
-              marginRight: 0,
-              marginTop: 5,
-              marginBottom: 5,
-              paddingLeft: 5,
-              paddingRight: 5,
-              paddingTop: 5,
-              paddingBottom: 5,
-              overflow: "visible",
-              borderColor: "#000000",
-              borderStyle: "solid",
-              borderWidth: 0,
-              borderLeftWidth: 0,
-              borderRightWidth: 0,
-              borderTopWidth: 0,
-              borderBottomWidth: 0,
-              borderRadius: 0,
-              textAlign: "left",
-              textAlignVertical: "center",
-              textDecorationLine: "none",
-              textTransform: "none",
-              lineHeight: 12,
-              letterSpacing: 0
-            }}
-            checked={this.state.CheckBox_31}
-            onChange={nextChecked =>
-              this.setState({ CheckBox_31: nextChecked })
-            }
-          />
-        </View>
-        <View
-          style={{
-            width: "50%",
-            height: "100%",
-            marginLeft: 0,
-            marginRight: 0,
-            marginTop: 0,
-            marginBottom: 0,
-            paddingLeft: 0,
-            paddingRight: 0,
-            paddingTop: 0,
-            paddingBottom: 0,
-            overflow: "visible",
-            fontSize: 12,
-            color: "#000000",
-            backgroundColor: "#ffffff",
-            fontFamily: "Roboto-Regular",
-            flexDirection: "column",
-            flexWrap: "wrap",
-            justifyContent: "flex-start",
-            alignItems: "stretch",
-            alignContent: "stretch",
-            borderColor: "#000000",
-            borderStyle: "solid",
-            borderWidth: 0,
-            borderLeftWidth: 0,
-            borderRightWidth: 0,
-            borderTopWidth: 0,
-            borderBottomWidth: 0,
-            borderRadius: 0,
-            backgroundSize: "auto"
-          }}
-        >
-          <CheckBox
-            text="Middelblocker"
-            disabled={false}
-            style={{
-              marginLeft: 0,
-              marginRight: 0,
-              marginTop: 5,
-              marginBottom: 5,
-              paddingLeft: 5,
-              paddingRight: 5,
-              paddingTop: 5,
-              paddingBottom: 5,
-              overflow: "visible",
-              borderColor: "#000000",
-              borderStyle: "solid",
-              borderWidth: 0,
-              borderLeftWidth: 0,
-              borderRightWidth: 0,
-              borderTopWidth: 0,
-              borderBottomWidth: 0,
-              borderRadius: 0,
-              textAlign: "left",
-              textAlignVertical: "center",
-              textDecorationLine: "none",
-              textTransform: "none",
-              lineHeight: 12,
-              letterSpacing: 0
-            }}
-            checked={this.state.CheckBox_24}
-            onChange={nextChecked =>
-              this.setState({ CheckBox_24: nextChecked })
-            }
-          />
-          <CheckBox
-            text="Libero"
-            disabled={false}
-            style={{
-              marginLeft: 0,
-              marginRight: 0,
-              marginTop: 5,
-              marginBottom: 5,
-              paddingLeft: 5,
-              paddingRight: 5,
-              paddingTop: 5,
-              paddingBottom: 5,
-              overflow: "visible",
-              borderColor: "#000000",
-              borderStyle: "solid",
-              borderWidth: 0,
-              borderLeftWidth: 0,
-              borderRightWidth: 0,
-              borderTopWidth: 0,
-              borderBottomWidth: 0,
-              borderRadius: 0,
-              textAlign: "left",
-              textAlignVertical: "center",
-              textDecorationLine: "none",
-              textTransform: "none",
-              lineHeight: 12,
-              letterSpacing: 0
-            }}
-            checked={this.state.CheckBox_29}
-            onChange={nextChecked =>
-              this.setState({ CheckBox_29: nextChecked })
-            }
-          />
-        </View>
-      </View>
+        Position
+      </Text>
+      <Radio
+        text="Opposite"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textAlign: "left",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        checked={this.state.Radio_53}
+        onChange={nextChecked => this.setState({ Radio_53: nextChecked })}
+      />
+      <Radio
+        text="Setter"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textAlign: "left",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        checked={this.state.Radio_49}
+        onChange={nextChecked => this.setState({ Radio_49: nextChecked })}
+      />
+      <Radio
+        text="Middelblocker"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textAlign: "left",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        checked={this.state.Radio_41}
+        onChange={nextChecked => this.setState({ Radio_41: nextChecked })}
+      />
+      <Radio
+        text="Outside hitter"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textAlign: "left",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        checked={this.state.Radio_54}
+        onChange={nextChecked => this.setState({ Radio_54: nextChecked })}
+      />
+      <Radio
+        text="Libero"
+        disabled={false}
+        style={{
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textAlign: "left",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        checked={this.state.Radio_55}
+        onChange={nextChecked => this.setState({ Radio_55: nextChecked })}
+      />
+      <Button
+        textStyle={{
+          fontSize: 12,
+          color: "#000000",
+          textAlign: "center",
+          fontFamily: "Roboto-Regular"
+        }}
+        style={{
+          width: "100%",
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 5,
+          marginBottom: 5,
+          paddingLeft: 5,
+          paddingRight: 5,
+          paddingTop: 5,
+          paddingBottom: 5,
+          overflow: "visible",
+          fontSize: 12,
+          color: "#000000",
+          backgroundColor: "#3366FF",
+          fontFamily: "Roboto-Regular",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderWidth: 0,
+          borderLeftWidth: 0,
+          borderRightWidth: 0,
+          borderTopWidth: 0,
+          borderBottomWidth: 0,
+          borderRadius: 0,
+          textAlign: "center",
+          textAlignVertical: "center",
+          textDecorationLine: "none",
+          textTransform: "none",
+          lineHeight: 12,
+          letterSpacing: 0
+        }}
+        onPress={() => alert("Pressed!")}
+      >
+        Submit
+      </Button>
     </View>
   )
 }
