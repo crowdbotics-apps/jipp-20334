@@ -24,7 +24,9 @@ export class __Blank extends React.Component {
     Input_5: "",
     Datepicker_13: new Date("01/01/2000"),
     CheckBox_21: false,
-    CheckBox_24: false
+    CheckBox_26: false,
+    CheckBox_24: false,
+    CheckBox_29: false
   }
   render = () => (
     <View
@@ -310,6 +312,39 @@ export class __Blank extends React.Component {
               this.setState({ CheckBox_21: nextChecked })
             }
           />
+          <CheckBox
+            text="Setter"
+            disabled={false}
+            style={{
+              marginLeft: 0,
+              marginRight: 0,
+              marginTop: 5,
+              marginBottom: 5,
+              paddingLeft: 5,
+              paddingRight: 5,
+              paddingTop: 5,
+              paddingBottom: 5,
+              overflow: "visible",
+              borderColor: "#000000",
+              borderStyle: "solid",
+              borderWidth: 0,
+              borderLeftWidth: 0,
+              borderRightWidth: 0,
+              borderTopWidth: 0,
+              borderBottomWidth: 0,
+              borderRadius: 0,
+              textAlign: "left",
+              textAlignVertical: "center",
+              textDecorationLine: "none",
+              textTransform: "none",
+              lineHeight: 12,
+              letterSpacing: 0
+            }}
+            checked={this.state.CheckBox_26}
+            onChange={nextChecked =>
+              this.setState({ CheckBox_26: nextChecked })
+            }
+          />
         </View>
         <View
           style={{
@@ -375,6 +410,39 @@ export class __Blank extends React.Component {
             checked={this.state.CheckBox_24}
             onChange={nextChecked =>
               this.setState({ CheckBox_24: nextChecked })
+            }
+          />
+          <CheckBox
+            text="Libero"
+            disabled={false}
+            style={{
+              marginLeft: 0,
+              marginRight: 0,
+              marginTop: 5,
+              marginBottom: 5,
+              paddingLeft: 5,
+              paddingRight: 5,
+              paddingTop: 5,
+              paddingBottom: 5,
+              overflow: "visible",
+              borderColor: "#000000",
+              borderStyle: "solid",
+              borderWidth: 0,
+              borderLeftWidth: 0,
+              borderRightWidth: 0,
+              borderTopWidth: 0,
+              borderBottomWidth: 0,
+              borderRadius: 0,
+              textAlign: "left",
+              textAlignVertical: "center",
+              textDecorationLine: "none",
+              textTransform: "none",
+              lineHeight: 12,
+              letterSpacing: 0
+            }}
+            checked={this.state.CheckBox_29}
+            onChange={nextChecked =>
+              this.setState({ CheckBox_29: nextChecked })
             }
           />
         </View>
