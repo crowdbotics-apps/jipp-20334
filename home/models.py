@@ -12,9 +12,9 @@ class CustomText(models.Model):
     )
     userroutineID = models.ForeignKey(
         "home.HomePage",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="customtext_userroutineID",
     )
     userID = models.BigIntegerField(
@@ -40,6 +40,11 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
+    user = models.ManyToManyField(
+        "users.User",
+        blank=True,
+        related_name="homepage_user",
+    )
 
     @property
     def api(self):
@@ -61,9 +66,9 @@ class Routines(models.Model):
     description = models.BigIntegerField()
     idh = models.ForeignKey(
         "home.Routinesexcercise",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="routines_idh",
     )
 
