@@ -7,18 +7,33 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0002_load_initial_data'),
+        ("home", "0002_load_initial_data"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Routines',
+            name="Routines",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('routine', models.BigIntegerField()),
-                ('player', models.BigIntegerField()),
-                ('description', models.BigIntegerField()),
-                ('routineID', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='routines_routineID', to='home.CustomText')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("routine", models.BigIntegerField()),
+                ("player", models.BigIntegerField()),
+                ("description", models.BigIntegerField()),
+                (
+                    "routineID",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="routines_routineID",
+                        to="home.CustomText",
+                    ),
+                ),
             ],
         ),
     ]

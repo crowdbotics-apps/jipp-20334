@@ -10,6 +10,21 @@ class CustomText(models.Model):
     title = models.CharField(
         max_length=150,
     )
+    userroutineID = models.ForeignKey(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="customtext_userroutineID",
+    )
+    userID = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
+    routinesID = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
 
     def __str__(self):
         return self.title
