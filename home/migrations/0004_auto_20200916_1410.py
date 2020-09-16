@@ -7,23 +7,29 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0003_routines'),
+        ("home", "0003_routines"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customtext',
-            name='routinesID',
+            model_name="customtext",
+            name="routinesID",
             field=models.BigIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='userID',
+            model_name="customtext",
+            name="userID",
             field=models.BigIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='userroutineID',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='customtext_userroutineID', to='home.HomePage'),
+            model_name="customtext",
+            name="userroutineID",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="customtext_userroutineID",
+                to="home.HomePage",
+            ),
         ),
     ]

@@ -58,5 +58,35 @@ class Routines(models.Model):
         related_name="routines_routineID",
     )
     routine = models.BigIntegerField()
-    player = models.BigIntegerField()
     description = models.BigIntegerField()
+    idh = models.ForeignKey(
+        "home.Routinesexcercise",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="routines_idh",
+    )
+
+
+class Routinesexcercise(models.Model):
+    "Generated Model"
+    routineexcerciseID = models.ForeignKey(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        related_name="routinesexcercise_routineexcerciseID",
+    )
+    routines = models.BigIntegerField()
+    excercise = models.BigIntegerField()
+    routineID = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
+
+
+class Excercise(models.Model):
+    "Generated Model"
+    excerciseID = models.ForeignKey(
+        "home.Routinesexcercise",
+        on_delete=models.CASCADE,
+        related_name="excercise_excerciseID",
+    )

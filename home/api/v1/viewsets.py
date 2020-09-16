@@ -1,6 +1,12 @@
 from rest_framework import viewsets
 from rest_framework import authentication
-from .serializers import CustomTextSerializer, HomePageSerializer, RoutinesSerializer
+from .serializers import (
+    CustomTextSerializer,
+    ExcerciseSerializer,
+    HomePageSerializer,
+    RoutinesSerializer,
+    RoutinesexcerciseSerializer,
+)
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.permissions import IsAdminUser
@@ -14,7 +20,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, Routines
+from home.models import CustomText, Excercise, HomePage, Routines, Routinesexcercise
 
 
 class SignupViewSet(ModelViewSet):
@@ -61,3 +67,21 @@ class RoutinesViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = Routines.objects.all()
+
+
+class RoutinesexcerciseViewSet(viewsets.ModelViewSet):
+    serializer_class = RoutinesexcerciseSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Routinesexcercise.objects.all()
+
+
+class ExcerciseViewSet(viewsets.ModelViewSet):
+    serializer_class = ExcerciseSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Excercise.objects.all()
