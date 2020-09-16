@@ -24,7 +24,7 @@ export class __Blank extends React.Component {
     Input_5: "",
     Datepicker_13: new Date("01/01/2000"),
     CheckBox_21: false,
-    CheckBox_24: true
+    CheckBox_24: false
   }
   render = () => (
     <View
@@ -345,7 +345,7 @@ export class __Blank extends React.Component {
           }}
         >
           <CheckBox
-            text="Checkbox"
+            text="Middelblocker"
             disabled={false}
             style={{
               marginLeft: 0,
