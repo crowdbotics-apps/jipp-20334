@@ -17,13 +17,16 @@ class CustomText(models.Model):
         on_delete=models.CASCADE,
         related_name="customtext_userroutineID",
     )
-    userID = models.BigIntegerField(
-        null=True,
-        blank=True,
-    )
     routinesID = models.BigIntegerField(
         null=True,
         blank=True,
+    )
+    user = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="customtext_user",
     )
 
     def __str__(self):
